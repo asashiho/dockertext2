@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Docker Sample</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+</head>
+
+<body>
+  <!-- Navbar-->
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Docker Sample</a>
+  </nav>
+
+  <!-- Contents -->
+  <div class="container" style="padding:20px 0 0 0">
+    <div class="row">
+      <div class="alert alert-primary" role="alert">
+        project_id = {{pid}}
+      </div>
+      <div class="alert alert-secondary text-primary" role="alert">
+        secret_id = {{id}} / secret_key = {{key}}
+      </div>
+    </div>
+    <div class="row">
+      <img class="img-fluid" src="{{image_path}}" alt="images" />
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webserver-green
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        type: webserver
+        color: green
+    spec:
+      containers:
+      - image: gcr.io/<PROJECT_ID>/imageview:green
+        name: webserver-container
+        env:
+        - name: PROJECT_ID
+          valueFrom:
+            configMapKeyRef:
+              name: projectid
+              key: project.id
+        - name: SECRET_ID
+          valueFrom:
+            secretKeyRef:
+              name: apikey
+              key: id
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: apikey
+              key: key
+        ports:
+        - containerPort: 80
+          name: http-server
+
