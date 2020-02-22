@@ -13,7 +13,7 @@ func main() {
 	app.Version = "1.0.0"
 
 	app.Flags = []cli.Flag{
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:  "lang",
 			Value: "en",
 			Usage: "language for the greeting(es/fr/en)",

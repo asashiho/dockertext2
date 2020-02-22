@@ -1,5 +1,5 @@
 # 1. Build Image
-FROM golang:1.8.4-jessie AS builder
+FROM golang:1.13 AS builder
 
 # Install dependencies
 WORKDIR /go/src/github.com/asashiho/dockertext-greet
