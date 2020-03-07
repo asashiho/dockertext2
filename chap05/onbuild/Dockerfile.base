@@ -1,5 +1,5 @@
 #  ベースイメージの設定
-FROM ubuntu:17.10
+FROM ubuntu:18.04
 
 # Nginx のインストール
 RUN apt-get -y update && apt-get -y upgrade 
